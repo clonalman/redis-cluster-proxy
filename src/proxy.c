@@ -719,6 +719,12 @@ int securityWarningCommand(void *r) {
     return PROXY_COMMAND_HANDLED;
 }
 
+int helloCommand(void *r) {
+    clientRequest *req = r;
+    addReplyString(req->client, "OK", req->id);
+    return PROXY_COMMAND_HANDLED;
+}
+
 int pingCommand(void *r) {
     clientRequest *req = r;
     addReplyString(req->client, "PONG", req->id);
