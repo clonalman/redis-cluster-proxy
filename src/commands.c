@@ -57,7 +57,7 @@ struct redisCommandDef redisCommandTable[203] = {
     {"pfmerge", -2, 1, -1, 1, 0, 0, NULL, NULL, NULL},
     {"strlen", 2, 1, 1, 1, 0, 0, NULL, NULL, NULL},
     {"shutdown", -1, 0, 0, 0, 0, 1, NULL, NULL, NULL},
-    {"hello", -2, 0, 0, 0, 0, 1, NULL, helloCommand, NULL},
+    {"hello", -2, 0, 0, 0, 0, 0, NULL, helloCommand, NULL},
     {"hincrby", 4, 1, 1, 1, 0, 0, NULL, NULL, NULL},
     {"multi", 1, 0, 0, 0, 0, 0, NULL, multiCommand, NULL},
     {"script", -2, 0, 0, 0, 0, 1, NULL, NULL, NULL},
