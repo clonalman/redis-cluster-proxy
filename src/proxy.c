@@ -721,7 +721,9 @@ int securityWarningCommand(void *r) {
 
 int helloCommand(void *r) {
     clientRequest *req = r;
-    addReplyString(req->client, "OK", req->id);
+    addReplyString(req->client, "+OK", req->id);
+    addReplyString(req->client, ":3", req->id);
+    addReplyString(req->client, ":redis proxy", req->id);	
     return PROXY_COMMAND_HANDLED;
 }
 
